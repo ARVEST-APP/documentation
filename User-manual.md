@@ -97,6 +97,7 @@ A Manifest tray is available on the right in every page where you need it. It al
 ![edcd94f907d4ec19e4fe87c828d2eb1a.png](./media/edcd94f907d4ec19e4fe87c828d2eb1a.png)
 
 # 📁 Projects
+
 A Project allows users to present and anotate one or several manifests. Behind the scene, a Project is composed of:
 
 1. A Mirador workspace (a list of manifests and a set of arranged windows),
@@ -120,7 +121,12 @@ Adding manifests to a project is done using the Mirador interface. After opening
 ![248d83d2d131726d4a582c496fd7fd70.png](./media/248d83d2d131726d4a582c496fd7fd70.png)
 ![5d0afe3e02515017411a580915e16a47.png](./media/5d0afe3e02515017411a580915e16a47.png)
 
+You can share a project with registered users and create publicly available snapshots of a project:
+
+![ceb4a80c1cf84f4af3d0acab5c853c8b.png](./media/ceb4a80c1cf84f4af3d0acab5c853c8b.png)
+
+
+
 # 📝 Annotations
 
-# 🔗 API
 
