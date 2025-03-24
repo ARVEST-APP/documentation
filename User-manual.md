@@ -126,7 +126,10 @@ You can share a project with registered users and create publicly available snap
 ![ceb4a80c1cf84f4af3d0acab5c853c8b.png](./media/ceb4a80c1cf84f4af3d0acab5c853c8b.png)
 
 
-
 # 📝 Annotations
 
+You can annotate manifests inside a project. First open your project and a manifest in Mirador. Then, you can toggle the annotation pannel with the following steps:
 
+![db3acd3d84cae55d7578d0bd0a058ca6.png](./media/db3acd3d84cae55d7578d0bd0a058ca6.png)
+
+You see that different types of annotation are available. They are note the same for video and image contyents. In particular, overlay annotations are not available for images. 
