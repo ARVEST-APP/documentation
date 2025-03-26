@@ -1,8 +1,8 @@
-# 💻 Developer Manual Table of Contents
+# 💻 Developer manual
 
 [🛠 Technology Overview](#technology-overview)  
 - [🐳 Docker](#docker)  
-  - [⚙️ Docker Compose Orchestration](#docker-compose-orchestration)  
+- [⚙️ Docker Compose Orchestration](#docker-compose-orchestration)  
 - [🌐 React](#react)  
 - [🚀 NestJS](#nestjs)  
 - [🗄 MariaDB](#mariadb)  
@@ -33,6 +33,9 @@
 ---
 
 # 🛠 Technology Overview
+
+## General scheme
+![schemaSTAGE-multiutilisateur-v3.drawio.png](media/schemaSTAGE-multiutilisateur-v3.drawio.png)
 
 ## 🐳 Docker
 
@@ -132,9 +135,12 @@ It result into this error :
 
 ![a030bb899cdd76fa5c9776a39a65d909.png](./media/a030bb899cdd76fa5c9776a39a65d909.png)
 
-## 📦 Database update
+# Database backend
 
-WIP
+## Database scheme
+![9d078471f1c4c35fdc989f21cf22612c.png](./media/9d078471f1c4c35fdc989f21cf22612c.png)
+
+## 📦 Database update
 
 - `docker exec -it <name-of-your-backend-container> /bin/sh`
 - `npm run typeorm:generate-migration` --name=<nameofmigration> # <nameofmigration>is like addNewFieldInUser

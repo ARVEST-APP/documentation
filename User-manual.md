@@ -1,4 +1,4 @@
-# 📗 User manual table of contents
+# 📗 User manual
 
 [👤 Account, Login, and User Preferences](#account-login-and-user-preferences)  
 [👥 User Groups](#user-groups)  
@@ -132,4 +132,4 @@ You can annotate manifests inside a project. First open your project and a manif
 
 ![db3acd3d84cae55d7578d0bd0a058ca6.png](./media/db3acd3d84cae55d7578d0bd0a058ca6.png)
 
-You see that different types of annotation are available. They are note the same for video and image contyents. In particular, overlay annotations are not available for images. 
+You see that different types of annotation are available. They are note the same for video and image contents. In particular, overlay annotations are not available for images. 

@@ -1,4 +1,4 @@
-# 📘 Admin Manual Table of Contents
+# 📘 Admin manual
 
 [🚀 Installation](#installation)  
 [🐳 Docker Stack Overview](#docker-stack-overview)  
@@ -17,12 +17,15 @@
 
 # 🚀 Installation 
 
-MMU have two installation mode (Dev and Prod), see README https://github.com/TETRAS-IIIF/mirador-multi-user.
+MMU have two installation mode (Dev and Prod), see README https://github.com/ARVEST-APP/mirador-multi-user.
 
 # 🐳 Docker stack overview
 ## 📖 Introduction
 This Docker stack setup includes a multi-service environment using docker-compose to orchestrate containers for development and production. The stack is designed to handle different environments with ease by utilizing multiple configuration files and environment variables.
 Services in docker-compose File
+
+## General scheme
+![schemaSTAGE-multiutilisateur-v3.drawio.png](media/schemaSTAGE-multiutilisateur-v3.drawio.png)
 
 ## 🏗 The stack
 1. Database (MariaDB)
@@ -101,7 +104,7 @@ services:
         - ${HTTP_FOLDER}:/app/upload
 ```
 
-* `traefik.yml` : Configures Traefik as a reverse proxy for the production environment.
+* `traefik.yml` : Configures Traefik as a reverse proxy for the production environment (the services can be exposed via any other mean of choice).
 
 ```
 services:
@@ -137,7 +140,7 @@ networks:
 This Docker stack is modular, efficient, and environment-aware. The use of multiple configuration files (port.yml, dev.yml, prod.yml, traefik.yml) allows for flexibility while the .env file ensures easy management of deployment settings. It facilitates a robust workflow for both local development and scalable production setups.
 
 # 🚢 Deploy
-Find the documentation to deploy in readme.md there : https://github.com/SCENE-CE/mirador-multi-user?tab=readme-ov-file#mirador-multi-user
+Find the documentation to deploy in readme.md there : https://github.com/ARVEST-APP/mirador-multi-user?tab=readme-ov-file#mirador-multi-user
 ## ✅ Check if your service are up : 
 
 - Backend should respond with : "Hello world !"
@@ -194,4 +197,55 @@ LOG_LEVEL=0
 ```
 
 You can also access logs of any service ( frontend - db - backend - caddy ) by using the command `docker-compose logs <name-of-your-service>` into `./mirador-multi-user`
+
+# Custom assets
+
+Custom assets can be added to the platform to personnalise some content. Custom assets have to be placed in the following folder : `<root_deployment_folfder>/frontend/customAssets`
+
+ The following can be configured:
+- Consent.tsx
+- favicon.svg
+- landing-footer.tsx
+- MediaFooter.tsx
+- CustomTerms.tsx
+- landing-background.webp 
+- TermsFooter.tsx
+
+For instance, the following content in `landing-footer.tsx` will display a capsule on the landing page, containing the logos placed in the `customAssets/logos` directory:
+
+```javascript
+const imagePaths = Object.values(images).map((module) => (module as { default: string }).default);\
+\
+export const LandingFooter = () => {\
+ return (\
+   \<div\
+     style={{\
+       position: 'fixed',\
+       bottom: '10px',\
+       right: '10px',\
+       background: 'rgba(255, 255, 255, 0.8)', // Semi-transparent white\
+       borderRadius: '15px', // Rounded capsule shape\
+       padding: '10px',\
+       display: 'flex',\
+       alignItems: 'center',\
+       gap: '10px',\
+       height: '70px', // Fixed height\
+     }}\
+   >\
+     {imagePaths.map((image, index) => (\
+       \<img\
+         key={index}\
+         src={image}\
+         alt={\`Logo ${index + 1}\`}\
+         style={{\
+           height: '100%', // Fill the capsule height\
+           width: 'auto', // Maintain aspect ratio\
+         }}\
+       />\
+     ))}\
+   \</div>\
+ );\
+};
+```
+
 

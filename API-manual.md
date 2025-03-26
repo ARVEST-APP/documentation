@@ -1,4 +1,4 @@
-# 📜 API Documentation Table of Contents
+# 📜 API manual
 
 [🔗 Access to the API Documentation](#access-to-the-api-documentation)  
 [🚶 Step by Step Tour](#step-by-step-tour)  
