@@ -34,8 +34,11 @@
 
 # 🛠 Technology Overview
 
-## General scheme
+## Simplified scheme
 ![schemaSTAGE-multiutilisateur-v3.drawio.png](media/schemaSTAGE-multiutilisateur-v3.drawio.png)
+
+## Software layers 
+![004f0adc1432b1c9f69f949325c5be8b.png](./media/004f0adc1432b1c9f69f949325c5be8b.png)
 
 ## 🐳 Docker
 
