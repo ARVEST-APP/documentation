@@ -156,14 +156,22 @@ docker-compose exec db /bin/bash
 ```
 mariadb -uroot -p
 ```
+The password is in the `.env`
+
 3 - Promote user : 
 ```
-UPDATE multiUsers.`user` SET `_isAdmin` = 1 WHERE id = <USER ID>
+UPDATE multiUsers.`user` SET `_isAdmin` = 1 WHERE id = <USER ID> ;
 ```
+
+The following request gives the list of users with their ID :
+```
+SELECT id,mail,_isAdmin FROM multiUsers.`user`; 
+```
+
 
 If you want to revocke the Admin status execute stape 1 and 2 ans then : 
 ```
-UPDATE multiUsers.`user` SET `_isAdmin` = 0 WHERE id = <USER ID>
+UPDATE multiUsers.`user` SET `_isAdmin` = 0 WHERE id = <USER ID> ;
 ```
 
 # 🔄 Impersonate user
